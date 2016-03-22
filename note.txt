@@ -1,0 +1,14 @@
+You need to create button in index.php
+========================================
+<div class="button-container">
+			
+	<a href="#" class="mybutton my-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">LOAD MORE</a>
+</div>
+
+Enqueue your js file in your theme functions.php
+================================================
+wp_enqueue_script( 'loadmore', get_template_directory_uri() . '/js/loadmore.js', array('jquery'), '22.3.1016', true );
+
+ajax.php include in functions.php
+==================================
+include_once('inc/ajax.php');
